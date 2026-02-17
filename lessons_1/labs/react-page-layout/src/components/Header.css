@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  background: #fff;
+  border-bottom: 1px solid #d0d0d8;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.header__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1c1c1e;
+  text-align: center;
+}
+
+.header__back {
+  position: absolute;
+  left: 12px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #007aff;
+  cursor: pointer;
+  padding: 0;
+}

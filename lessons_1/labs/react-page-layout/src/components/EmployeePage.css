@@ -1,0 +1,108 @@
+.emp-page {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.emp-page--empty {
+  background: #f2f2f7;
+}
+
+.emp-page__placeholder {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8e8e93;
+  font-size: 0.9rem;
+  padding: 32px;
+}
+
+/* Profile section */
+.emp-page__profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 16px;
+  border-bottom: 1px solid #e5e5ea;
+  background: #fafafa;
+}
+
+.emp-page__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  letter-spacing: 0.04em;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.emp-page__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.emp-page__name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1c1c1e;
+  margin-bottom: 3px;
+}
+
+.emp-page__title {
+  font-size: 0.82rem;
+  color: #6e6e73;
+}
+
+/* Contact rows */
+.emp-page__contacts {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  padding: 13px 16px;
+  border-bottom: 1px solid #e5e5ea;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.contact-row:hover {
+  background: #f9f9f9;
+}
+
+.contact-row__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-row__label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1c1c1e;
+}
+
+.contact-row__value {
+  font-size: 0.78rem;
+  color: #8e8e93;
+}
+
+.contact-row__chevron {
+  font-size: 1.3rem;
+  color: #c7c7cc;
+}

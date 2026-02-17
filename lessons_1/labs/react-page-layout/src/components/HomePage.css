@@ -1,0 +1,8 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border-right: 1px solid #d0d0d8;
+  background: #efeff4;
+  overflow: hidden;
+}
