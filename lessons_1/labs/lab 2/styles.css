@@ -1,0 +1,101 @@
+html {
+  border-left: 5px solid lightgray;
+}
+
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header,
+main,
+footer {
+  padding: 1rem 2rem;
+}
+
+h1 {
+  color: tomato;
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+img {
+  width: 100%;
+}
+
+/* Navigation */
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+header .nav-list {
+  justify-content: space-between;
+}
+
+header .nav-list a {
+  color: lightgray;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+header .nav-list a:hover {
+  color: tomato;
+}
+
+/* Footer nav */
+.footer-nav a {
+  color: tomato;
+  text-decoration: none;
+}
+
+/* Article */
+article {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 2rem;
+}
+
+article header p {
+  color: lightgray;
+  margin-bottom: 0;
+}
+
+article h3 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-top: 0.25rem;
+}
+
+article p.body-text::first-letter {
+  color: lightgray;
+  font-size: 3rem;
+  float: left;
+  line-height: 1;
+  margin-right: 0.1em;
+}
+
+/* Continues link */
+.continues {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  color: tomato;
+  text-decoration: none;
+}
+
+/* Copyright */
+.copyright {
+  color: lightgray;
+}
