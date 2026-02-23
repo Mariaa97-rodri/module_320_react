@@ -1,14 +1,35 @@
-import { Route, Routes } from "react-router-dom";
-// import Main from "./pages/Main";
-import Profile from "./components/StarshipCard";
+import { useEffect, useState } from "react";
+import getAllStarships from "./services/sw-api";
+import StarshipCard from "./components/StarshipCard";
+import "./style.css";
 
-export default function App() {
+function App() {
+  const [starships, setStarships] = useState([]);
+
+  useEffect(() => {
+    async function fetchStarships() {
+      try {
+        const data = await getAllStarships();
+        setStarships(data.results);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchStarships();
+  }, []);
+
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
+    <div className="container">
+      <h1>Star Wars Starships</h1>
+
+      <div className="card-container">
+        {starships.map((ship) => (
+          <StarshipCard key={ship.url} starship={ship} />
+        ))}
+      </div>
     </div>
   );
 }
+
+export default App;

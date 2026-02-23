@@ -1,7 +1,12 @@
-import { useParams } from "react-router-dom";
-
-export default function Profile() {
-  const params = useParams();
-  const userId = params.id;
-  return <h1>User ID: {userId}</h1>;
+function StarshipCard ({starship}) {
+  return (
+    <div className="card">
+      <h2>{starship.name}</h2>
+      <p>ModelL {starship.model}</p>
+      <p>Manufacturer: {starship.manufacturer}</p>
+      <p>Passengers: {starship.passengers}</p>
+    </div>
+  );
 }
+
+export default StarshipCard;
