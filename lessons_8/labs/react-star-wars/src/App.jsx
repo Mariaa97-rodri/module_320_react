@@ -1,20 +1,35 @@
-import React from 'react'
-import { useState } from 'react'
+import { useEffect, useState } from "react";
+import getAllStarships from "./services/sw-api";
+import StarshipCard from "./components/StarshipCard";
+import "./style.css";
 
-export default function Starships() {
-  //create state to hold starships data
+function App() {
+  const [starships, setStarships] = useState([]);
 
-  const [starships, setStarships] = useState([])
+  useEffect(() => {
+    async function fetchStarships() {
+      try {
+        const data = await getAllStarships();
+        setStarships(data.results);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchStarships();
+  }, []);
 
   return (
-    <div>
-      <h1>Star Wars Characters</h1>
-  {/* display starships data here */}
-  <ul>
-    {starships.map((starships, index) => (
-      <li key={index}>{ship.name}</li>
-    ))}
-  </ul>
-</div>
+    <div className="container">
+      <h1>Star Wars Starships</h1>
+
+      <div className="card-container">
+        {starships.map((ship) => (
+          <StarshipCard key={ship.url} starship={ship} />
+        ))}
+      </div>
+    </div>
   );
 }
+
+export default App;
